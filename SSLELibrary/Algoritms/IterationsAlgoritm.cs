@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SSLELibrary.Exceptions;
 
 namespace SSLELibrary.Alghoritms
 {
-    internal class IterationSolutionNotFound : Exception
-    {
-        public IterationSolutionNotFound(string msg)
-            : base("Решение не может быть найдено: \r\n" + msg)
-        {
-        }
-    }
 
-    internal class IterationsAlghoritm
+    internal class IterationsAlgoritm
     {
         private static double[,] a_matrix;  // матрица A
         private static double[] x_vector;   // вектор неизвестных x
@@ -22,11 +16,11 @@ namespace SSLELibrary.Alghoritms
         private static double eps;          // порядок точности для сравнения вещественных чисел 
         private static int size;            // размерность задачи
 
-        internal IterationsAlghoritm(double[,] a_matrix, double[] b_vector)
+        internal IterationsAlgoritm(double[,] a_matrix, double[] b_vector)
             : this(a_matrix, b_vector, 0.0001)
         {
         }
-        internal IterationsAlghoritm(double[,] sa_matrix, double[] sb_vector, double ieps)
+        internal IterationsAlgoritm(double[,] sa_matrix, double[] sb_vector, double ieps)
         {
             if (sa_matrix == null || sb_vector == null)
                 throw new ArgumentNullException("Один из параметров равен null.");

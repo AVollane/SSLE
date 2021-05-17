@@ -12,13 +12,13 @@ namespace SSLELibrary.Utils
     {
         public static double[] Gauss(LinearEquationSystem system)
         {
-            GaussAlghoritm gauss = new GaussAlghoritm(system.Matrix, system.RightPart);
+            GaussAlgoritm gauss = new GaussAlgoritm(system.Matrix, system.RightPart);
             return gauss.XVector;
         }
 
         public static double[] Iterations(LinearEquationSystem system)
         {
-            IterationsAlghoritm iterations = new IterationsAlghoritm(system.Matrix, system.RightPart);
+            IterationsAlgoritm iterations = new IterationsAlgoritm(system.Matrix, system.RightPart);
             return iterations.XVector;
         }
     }

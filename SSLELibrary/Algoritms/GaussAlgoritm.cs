@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSLELibrary.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,8 @@ using System.Threading.Tasks;
 
 namespace SSLELibrary.Alghoritms
 {
-    internal class GaussSolutionNotFound : Exception
-    {
-        public GaussSolutionNotFound(string msg)
-            : base("Решение не может быть найдено: \r\n" + msg)
-        {
-        }
-    }
 
-    internal class GaussAlghoritm
+    internal class GaussAlgoritm
     {
         private double[,] initial_a_matrix;
         private double[,] a_matrix;  // матрица A
@@ -25,11 +19,11 @@ namespace SSLELibrary.Alghoritms
         private int size;            // размерность задачи
 
 
-        internal GaussAlghoritm(double[,] a_matrix, double[] b_vector)
+        internal GaussAlgoritm(double[,] a_matrix, double[] b_vector)
             : this(a_matrix, b_vector, 0.0001)
         {
         }
-        public GaussAlghoritm(double[,] a_matrix, double[] b_vector, double eps)
+        public GaussAlgoritm(double[,] a_matrix, double[] b_vector, double eps)
         {
             if (a_matrix == null || b_vector == null)
                 throw new ArgumentNullException("Один из параметров равен null.");
@@ -89,9 +83,9 @@ namespace SSLELibrary.Alghoritms
             if (max_abs < eps)
             {
                 if (Math.Abs(b_vector[row]) > eps)
-                    throw new GaussSolutionNotFound("Система уравнений несовместна.");
+                    throw new GaussSolutionNotFoundException("The system of equations is incompatible.");
                 else
-                    throw new GaussSolutionNotFound("Система уравнений имеет множество решений.");
+                    throw new GaussSolutionNotFoundException("The system of equations has many solutions.");
             }
 
             // меняем местами индексы столбцов
