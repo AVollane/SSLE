@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLE", "SSLE\SSLE.csproj", "{A1F1F791-5138-4A58-AD05-064BF6775790}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSLELibrary", "SSLELibrary\SSLELibrary.csproj", "{6755FBA7-DF39-4E3B-A545-10CDEC0CD8C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLETests", "SSLETests\SSLETests.csproj", "{7D1882FC-24AA-41F5-A1AD-7EB56C52735B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A1F1F791-5138-4A58-AD05-064BF6775790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1F1F791-5138-4A58-AD05-064BF6775790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1F1F791-5138-4A58-AD05-064BF6775790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6755FBA7-DF39-4E3B-A545-10CDEC0CD8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6755FBA7-DF39-4E3B-A545-10CDEC0CD8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6755FBA7-DF39-4E3B-A545-10CDEC0CD8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6755FBA7-DF39-4E3B-A545-10CDEC0CD8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1882FC-24AA-41F5-A1AD-7EB56C52735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1882FC-24AA-41F5-A1AD-7EB56C52735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1882FC-24AA-41F5-A1AD-7EB56C52735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1882FC-24AA-41F5-A1AD-7EB56C52735B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
